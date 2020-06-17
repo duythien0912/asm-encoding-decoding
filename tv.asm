@@ -14,7 +14,6 @@ en_code:
 	leave
 	ret
 
-
 de_code:
 	push	rbp
 	mov	rbp,rsp
@@ -26,5 +25,3 @@ de_code:
 	mov	rax,r13
 	leave
 	ret
-
-
