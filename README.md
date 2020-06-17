@@ -8,7 +8,8 @@
 
 
 # Run this project 
-This project running on Ubuntu 16.04.6 LTS (Xenial Xerus) 64bit 
+This project running on Ubuntu 16.04.6 LTS (Xenial Xerus) 64bit
+
 *The command line may require adjusting for other models*
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/UFLJdTyGTCU/0.jpg)](https://www.youtube.com/watch?v=UFLJdTyGTCU)
