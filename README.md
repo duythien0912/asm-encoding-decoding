@@ -30,3 +30,13 @@ Run file and check result
 ```bash
 ./result.o
 ```
+
+Quick run
+```bash
+gcc -g -m64 -o encode.o encode.c tv.o && gcc -g -m64 -o decode.o decode.c tv.o && ./encode.o && ./decode.o
+```
+
+Quick run cach2
+```bash
+rm -rf myfile_encode.txt && rm -rf myfile_decode.txt && nasm -g -f elf64 tv.asm -l ror.lst -o ror.o && gcc -g -m64 -o test ./cach2.c ror.o && ./test myfile.txt myfile_encode.txt myfile_decode.txt 1
+```

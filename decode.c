@@ -1,3 +1,5 @@
+// gcc -g -m64 -o decode.o decode.c tv.o
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -26,7 +28,7 @@ main ()
     {
       char n[5] = "";
       strncat (n, &textInFile[i], 2);
-    //   fputs(en_code(n,key[ikey]), fptr_save);
+      //   fputs(en_code(n,key[ikey]), fptr_save);
       fputs (de_code (n, key[ikey]), fptr_save);
       //printf("%d \n", key[ikey]);
       ikey++;

@@ -1,3 +1,5 @@
+// gcc -g -m64 -o encode.o encode.c tv.o
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -10,13 +12,13 @@ main ()
 
   //file input
   FILE *fptr;
-  fptr = fopen ("myfile_encode.txt", "r");
+  fptr = fopen ("myfile.txt", "r");
   fscanf (fptr, "%[^EOF]", textInFile);
   fclose (fptr);
 
   //file save
   FILE *fptr_save;
-  fptr_save = fopen ("myfile_decode.txt", "w+");
+  fptr_save = fopen ("myfile_encode.txt", "w+");
 
   int key[20] = { 1, 2, 3, 14, 3, 6, 7, 12 };
   int len_key_text = 8;
@@ -26,9 +28,7 @@ main ()
     {
       char n[5] = "";
       strncat (n, &textInFile[i], 2);
-    //   fputs(en_code(n,key[ikey]), fptr_save);
-      fputs (de_code (n, key[ikey]), fptr_save);
-      //printf("%d \n", key[ikey]);
+      fputs (en_code (n, key[ikey]), fptr_save);
       ikey++;
       if (ikey >= len_key_text)
 	ikey = 0;
